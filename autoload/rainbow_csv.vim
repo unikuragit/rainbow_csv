@@ -991,8 +991,7 @@ func! rainbow_csv#restore_statusline()
     augroup StatusDisableGrp
         autocmd!
     augroup END
-    let escaped_statusline = s:status_escape_string(b:statusline_before)
-    execute "set statusline=" . escaped_statusline
+    let &statusline=b:statusline_before
     unlet b:statusline_before
 endfunc
 
